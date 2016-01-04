@@ -17,12 +17,10 @@ class ImageSetThumbnail extends React.Component {
 		)
 	}
 	clickSetRow = () => {
-		console.log(this)
-		console.log(React.PropTypes)
-		this.context.router.transitionTo('/')
+		this.context.router.push(`/images/${this.props.set.id}`)
 	}
 	static contextTypes = {
-		history: React.PropTypes.func.isRequired
+		router: React.PropTypes.func.isRequired
 	}
 }
 

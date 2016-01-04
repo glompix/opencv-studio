@@ -7,12 +7,14 @@ import User from './components/pages/User'
 import Users from './components/pages/Users'
 import NotFound from './components/pages/NotFound'
 import ImageSetList from './components/pages/ImageSetList'
+import ImageSetDetail from './components/pages/ImageSetDetail'
 
 render((
 	<Router history={browserHistory}>
     <Route path="/" component={App}>
-			<IndexRoute component={Index}/>
+			<IndexRoute component={ImageSetList}/>
       <Route path="images" component={ImageSetList}/>
+      <Route path="images/:id" component={ImageSetDetail}/>
       <Route path="users" component={Users}>
         <Route path=":userId" component={User}/>
       </Route>
